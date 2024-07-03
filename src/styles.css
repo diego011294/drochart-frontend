@@ -46,7 +46,7 @@ body {
 .image-text {
     position: relative;
     display: inline-block;
-    background: url('public/img/Rolling plane.png') repeat;
+    background: url('/img/Rolling plane.png') repeat;
     background-size: 50%;
     -webkit-background-clip: text;
     background-clip: text;

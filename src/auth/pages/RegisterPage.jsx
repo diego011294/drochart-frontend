@@ -54,7 +54,7 @@ export const RegisterPage = () => {
 
     return (
         <div className="flex flex-col md:flex-row justify-end bg-no-repeat bg-cover md:bg-contain"
-            style={{ backgroundImage: "url('/img/Oso + logo.png')" }}>
+            style={{ backgroundImage: "url('/img/OsoFondo.png')" }}>
             <div className="p-10 md:p-[100px]">
                 <div className="bg-custom-gradient border-t-4 border-[#F05858] flex flex-col">
                     <div className="p-2">
