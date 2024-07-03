@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = 'http://roundhouse.proxy.rlwy.net:47292/users';
+const BASE_URL = 'https://fearless-playfulness-production.up.railway.app/users';
 
 const config = () => {
     return {

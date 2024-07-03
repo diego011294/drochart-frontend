@@ -11,7 +11,7 @@ export const UserStats = () => {
         const fetchUserWithMostPosts = async () => {
             try {
 
-                const response = await axios.get('http://roundhouse.proxy.rlwy.net:47292/users/most-posts')
+                const response = await axios.get('https://fearless-playfulness-production.up.railway.app/users/most-posts')
                 setUserWithMostPosts(response.data);
             } catch (error) {
                 console.error('Error fetching user with most posts:', error);

@@ -33,7 +33,7 @@ export const RegisterPage = () => {
         }
 
         try {
-            const response = await axios.post('http://roundhouse.proxy.rlwy.net:47292/users', registerForm);
+            const response = await axios.post('https://fearless-playfulness-production.up.railway.app/users', registerForm);
             Swal.fire({
                 title: 'Registro Exitoso',
                 text: 'Tu cuenta ha sido creada correctamente.',

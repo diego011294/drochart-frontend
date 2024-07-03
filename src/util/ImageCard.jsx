@@ -9,7 +9,7 @@ export const ImageCard = ({ imageId }) => {
         const fetchImage = async () => {
             try {
                 
-                const response = await axios.get(`http://roundhouse.proxy.rlwy.net:47292/api/images/${imageId}`,{
+                const response = await axios.get(`https://fearless-playfulness-production.up.railway.app/api/images/${imageId}`,{
                 });
                 console.log("Image response:", response.data);
                 setImage(response.data);

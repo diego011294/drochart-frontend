@@ -15,7 +15,7 @@ export const UserImagesPanel = () => {
         const fetchUserImages = async () => {
             try {
                 const token = sessionStorage.getItem('token');
-                const response = await axios.get('http://roundhouse.proxy.rlwy.net:47292/api/images/show', {
+                const response = await axios.get('https://fearless-playfulness-production.up.railway.app/api/images/show', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -50,7 +50,7 @@ export const UserImagesPanel = () => {
     
             if (result.isConfirmed) {
                 // Usuario confirmó la eliminación
-                await axios.delete(`http://roundhouse.proxy.rlwy.net:47292/api/images/${id}`, {
+                await axios.delete(`https://fearless-playfulness-production.up.railway.app/api/images/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -84,7 +84,7 @@ export const UserImagesPanel = () => {
             const token = sessionStorage.getItem('token');
 
             // Obtener ID del usuario basado en el username
-            const userIdResponse = await axios.get(`http://roundhouse.proxy.rlwy.net:47292/users/username/${login.user.username}/id`, {
+            const userIdResponse = await axios.get(`https://fearless-playfulness-production.up.railway.app/users/username/${login.user.username}/id`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -106,7 +106,7 @@ export const UserImagesPanel = () => {
             });
 
             if (result.isConfirmed) {
-                await axios.delete(`http://roundhouse.proxy.rlwy.net:47292/users/${userId}`, {
+                await axios.delete(`https://fearless-playfulness-production.up.railway.app/users/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

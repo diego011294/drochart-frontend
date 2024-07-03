@@ -27,7 +27,7 @@ const ImageUploadForm = ({ isEditing }) => {
 
     const fetchImageDetails = async (id, token) => {
         try {
-            const response = await axios.get(`http://roundhouse.proxy.rlwy.net:47292/api/images/${id}`, {
+            const response = await axios.get(`https://fearless-playfulness-production.up.railway.app/api/images/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
@@ -77,7 +77,7 @@ const ImageUploadForm = ({ isEditing }) => {
                 formData.append("image", image);
             }
 
-            const url = isEditing ? `http://roundhouse.proxy.rlwy.net:47292/api/images/${id}` : 'http://roundhouse.proxy.rlwy.net:47292/api/images/upload';
+            const url = isEditing ? `https://fearless-playfulness-production.up.railway.app/api/images/${id}` : 'https://fearless-playfulness-production.up.railway.app/api/images/upload';
             const method = isEditing ? 'put' : 'post';
 
             const response = await axios({

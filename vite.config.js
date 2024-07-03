@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://roundhouse.proxy.rlwy.net:47292', 
+        target: 'https://fearless-playfulness-production.up.railway.app/', 
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }

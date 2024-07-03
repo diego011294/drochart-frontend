@@ -5,7 +5,6 @@ import { LogoutBtn } from "../../util/LogoutBtn";
 import { useContext } from "react";
 import { AuthContext } from "../../auth/context/AuthContext";
 import { NavLink } from "react-router-dom";
-import { LoginBtn } from "../../util/LoginBtn";
 import { LoginNav } from "../../util/LoginNav";
 import { Icon } from "@iconify/react/dist/iconify.js";
 

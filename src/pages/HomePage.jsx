@@ -1,4 +1,3 @@
-import { BannerVideo } from "../components/BannerVideo"
 import { GalleryHome } from "../components/GalleryHome"
 import { Header } from "../components/Header"
 import { QueEs } from "../components/QueEs"

@@ -22,7 +22,7 @@ export const ImageDetailPage = () => {
         const fetchImage = async () => {
             try {
                 const token = sessionStorage.getItem('token');
-                const response = await axios.get(`http://roundhouse.proxy.rlwy.net:47292/api/images/${id}`, {
+                const response = await axios.get(`https://fearless-playfulness-production.up.railway.app/api/images/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -42,7 +42,7 @@ export const ImageDetailPage = () => {
         setLoadingComments(true);
         try {
             const token = sessionStorage.getItem('token');
-            const response = await axios.get(`http://roundhouse.proxy.rlwy.net:47292/api/comments/image/${id}?page=${page}&size=6`, {
+            const response = await axios.get(`https://fearless-playfulness-production.up.railway.app/api/comments/image/${id}?page=${page}&size=6`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -63,7 +63,7 @@ export const ImageDetailPage = () => {
     const handleCommentSubmit = async () => {
         try {
             const token = sessionStorage.getItem('token');
-            await axios.post(`http://roundhouse.proxy.rlwy.net:47292/api/comments/create/${id}`, {
+            await axios.post(`https://fearless-playfulness-production.up.railway.app/api/comments/create/${id}`, {
                 content: newComment
             }, {
                 headers: {
@@ -80,7 +80,7 @@ export const ImageDetailPage = () => {
     const handleDeleteComment = async (commentId) => {
         try {
             const token = sessionStorage.getItem('token');
-            await axios.delete(`http://roundhouse.proxy.rlwy.net:47292/api/comments/${commentId}`, {
+            await axios.delete(`https://fearless-playfulness-production.up.railway.app/api/comments/${commentId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -94,7 +94,7 @@ export const ImageDetailPage = () => {
     const handleLikeImage = async () => {
         try {
             const token = sessionStorage.getItem('token');
-            await axios.put(`http://roundhouse.proxy.rlwy.net:47292/api/images/${id}/like`, {}, {
+            await axios.put(`https://fearless-playfulness-production.up.railway.app/api/images/${id}/like`, {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

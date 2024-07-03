@@ -28,8 +28,8 @@ export const GalleryPage = () => {
             }
 
             const url = searchTerm
-                ? `http://roundhouse.proxy.rlwy.net:47292/api/images/search?titulo=${encodeURIComponent(searchTerm)}&page=${currentPage}&size=12`
-                : `http://roundhouse.proxy.rlwy.net:47292/api/images/gallery?page=${currentPage}&size=12`;
+                ? `https://fearless-playfulness-production.up.railway.app/api/images/search?titulo=${encodeURIComponent(searchTerm)}&page=${currentPage}&size=12`
+                : `https://fearless-playfulness-production.up.railway.app/api/images/gallery?page=${currentPage}&size=12`;
 
             const response = await axios.get(url, {
                 headers: {
@@ -73,7 +73,7 @@ export const GalleryPage = () => {
                 return;
             }
 
-            await axios.put(`http://roundhouse.proxy.rlwy.net:47292/api/images/${imageId}/like`, {}, {
+            await axios.put(`https://fearless-playfulness-production.up.railway.app/api/images/${imageId}/like`, {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -122,7 +122,7 @@ export const GalleryPage = () => {
             });
 
             if (result.isConfirmed) {
-                await axios.delete(`http://roundhouse.proxy.rlwy.net:47292/api/images/${id}`, {
+                await axios.delete(`https://fearless-playfulness-production.up.railway.app/api/images/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

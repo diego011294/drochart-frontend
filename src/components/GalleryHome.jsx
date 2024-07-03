@@ -11,7 +11,7 @@ export const GalleryHome = () => {
     useEffect(() => {
         const fetchLatestImages = async () => {
             try {
-                const response = await axios.get("http://roundhouse.proxy.rlwy.net:47292/api/images/latest");
+                const response = await axios.get("https://fearless-playfulness-production.up.railway.app/api/images/latest");
                 setLatestImages(response.data);
             } catch (error) {
                 console.error('Error fetching latest images:', error);
