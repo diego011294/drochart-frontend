@@ -21,10 +21,6 @@ export const GalleryHome = () => {
         fetchLatestImages();
     }, []);
 
-    const handleImageClick = (imageId) => {
-        window.location.href = `/gallery/details/${imageId}`;
-    };
-
     return (
         <div className="bg-no-repeat bg-cover p-4 flex flex-col items-center"
             style={{ backgroundImage: "url('/img/FondoGaleria.png')" }}>
@@ -47,7 +43,7 @@ export const GalleryHome = () => {
             </div>
             <div className="flex flex-col items-center md:flex-row justify-center">
                 {latestImages.map(image => (
-                    <Link key={image.id} onClick={() => handleImageClick(image.id)}>
+                    <Link key={image.id} to={`/gallery/details/${image.id}`}>
                         <ImageCard imageId={image.id} />
                     </Link>
                 ))}
