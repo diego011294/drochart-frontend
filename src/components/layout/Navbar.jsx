@@ -4,7 +4,7 @@ import { BurguerBtn } from "../../util/BurguerBtn";
 import { LogoutBtn } from "../../util/LogoutBtn";
 import { useContext } from "react";
 import { AuthContext } from "../../auth/context/AuthContext";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { LoginNav } from "../../util/LoginNav";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
@@ -36,9 +36,9 @@ export const Navbar = () => {
                 <div className="flex justify-center gap-5 items-center max-w-full h-[30px] bg-[#242324]">
                     <div className="text-white">
                         {showFirst ? (
-                            <p className="text-[14px]">Explora nuestra <span className="text-[#F05858]">galería</span> <a href="/gallery" className="text-[12px] border-b border-white"> Ver más</a></p>
+                            <p className="text-[14px]">Explora nuestra <span className="text-[#F05858]">galería</span> <Link to="/gallery" className="text-[12px] border-b border-white"> Ver más</Link></p>
                         ) : (
-                            <p className="text-[14px]">Sube un nuevo <span className="text-[#F05858]">diseño</span> <a href="/nueva" className="text-[12px] border-b border-white"> Subir</a></p>
+                            <p className="text-[14px]">Sube un nuevo <span className="text-[#F05858]">diseño</span> <Link to="/nueva" className="text-[12px] border-b border-white"> Subir</Link></p>
                         )}
 
                     </div>
@@ -64,7 +64,7 @@ export const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <div>
                             {login.isAuth && (
-                                <a className="hidden lg:block bg-[#0000006a] hover:bg-black transition-all duration-500 rounded-full p-2" href="/show"><Icon className="text-white text-2xl" icon="ph:images-fill" /></a>
+                                <Link className="hidden lg:block bg-[#0000006a] hover:bg-black transition-all duration-500 rounded-full p-2" to="/show"><Icon className="text-white text-2xl" icon="ph:images-fill" /></Link>
                             )}
                         </div>
                         <div className="hidden lg:block">
@@ -98,7 +98,7 @@ export const Navbar = () => {
                             {login.isAuth && (
                             <div className="bg-[#0000006a] hover:bg-black transition-all duration-500 rounded-full p-2 flex items-center">
                                 
-                                    <a className="" href="/show"><Icon className="text-white text-2xl" icon="ph:images-fill" /></a>
+                                    <Link to="/show"><Icon className="text-white text-2xl" icon="ph:images-fill" /></Link>
                             </div>
                             )}
                         </div>
