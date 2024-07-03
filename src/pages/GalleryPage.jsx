@@ -26,6 +26,7 @@ export const GalleryPage = () => {
             const token = sessionStorage.getItem('token');
             if (!token) {
                 setError('Token no encontrado, por favor inicie sesión.');
+                setLoadingGallery(false);
                 return;
             }
 
@@ -55,6 +56,8 @@ export const GalleryPage = () => {
             } else {
                 setError('Error al obtener las imágenes.');
             }
+        } finally {
+            setLoadingGallery(false);
         }
     };
 
