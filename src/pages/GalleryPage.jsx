@@ -14,12 +14,14 @@ export const GalleryPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
+    const [loadingGallery, setLoadingGallery] = useState(false);
 
     useEffect(() => {
         fetchImages();
     }, [currentPage, searchTerm]);
 
     const fetchImages = async () => {
+        setLoadingGallery(true);
         try {
             const token = sessionStorage.getItem('token');
             if (!token) {
@@ -177,7 +179,10 @@ export const GalleryPage = () => {
                 </button>
             </div>
             <div className="w-full bg-custom-gradient border-t-4 border-[#F05858] grid grid-cols-1 p-10 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {images.map(image => (
+            {loadingGallery ? (
+                        <p className="text-white text-center p-4">Cargando Diseños...</p>
+                    ) : (
+                images.map(image => (
                     <div key={image.id} className="border border-opacity-25 border-white p-2 bg-[#686868]">
                         <div className="flex flex-col items-center">
                             <div className="flex justify-end">
@@ -214,6 +219,7 @@ export const GalleryPage = () => {
                             </>}
                         </div>
                     </div>
+                )
                 ))}
             </div>
             <div className="flex justify-center gap-4 mt-6">
