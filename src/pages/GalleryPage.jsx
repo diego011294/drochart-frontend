@@ -56,8 +56,6 @@ export const GalleryPage = () => {
             } else {
                 setError('Error al obtener las imágenes.');
             }
-        } finally {
-            setLoadingGallery(false);
         }
     };
 
