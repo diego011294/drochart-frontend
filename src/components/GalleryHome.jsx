@@ -47,9 +47,9 @@ export const GalleryHome = () => {
             </div>
             <div className="flex flex-col items-center md:flex-row justify-center">
                 {latestImages.map(image => (
-                    <button key={image.id} onClick={() => handleImageClick(image.id)}>
+                    <Link key={image.id} onClick={() => handleImageClick(image.id)}>
                         <ImageCard imageId={image.id} />
-                    </button>
+                    </Link>
                 ))}
             </div>
             <div className="w-full pb-4 md:w-[650px] flex flex-col items-center">
