@@ -16,7 +16,7 @@ export const SliderHome = () => {
             <div className="hidden lg:block">
                 <div
                     className={`slider1 pt-4 bg-no-repeat bg-cover flex items-center justify-between h-[520px] ${activeSlider === 1 ? 'block' : 'hidden'}`}
-                    style={{ backgroundImage: "url('/public/img/Fondo slider.png')" }}>
+                    style={{ backgroundImage: "url('/img/Fondo slider.png')" }}>
                     <div className="hidden md:block">
                         <h1 className="text-white transform -rotate-90 scale-x-[1] text-7xl font-bold font-robotoFlex opacity-70 w-[300px]">
                             REGISTRO
@@ -61,12 +61,12 @@ export const SliderHome = () => {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <img className="w-[250px]" src="/public/img/Deco pipas.png" alt="Pipas" />
+                        <img className="w-[250px]" src="/img/Deco pipas.png" alt="Pipas" />
                     </div>
                 </div>
                 <div
                     className={`slider2 pt-4 bg-no-repeat bg-cover flex items-center justify-between transition-all duration-500 h-[520px] ${activeSlider === 2 ? 'block' : 'hidden'}`}
-                    style={{ backgroundImage: "url('/public/img/Slider2.png')" }}>
+                    style={{ backgroundImage: "url('/img/Slider2.png')" }}>
                     <div className="hidden md:block">
                         <h1 className="text-white transform -rotate-90 scale-x-[1] text-7xl font-bold font-robotoFlex opacity-70 w-[300px]">
                             UPLOAD
@@ -107,12 +107,12 @@ export const SliderHome = () => {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <img className="w-[250px]" src="/public/img/Deco pipas.png" alt="Pipas" />
+                        <img className="w-[250px]" src="/img/Deco pipas.png" alt="Pipas" />
                     </div>
                 </div>
                 <div
                     className={`slider3 pt-4 bg-no-repeat bg-cover flex items-center justify-between transition-all duration-500 h-[520px] ${activeSlider === 3 ? 'block' : 'hidden'}`}
-                    style={{ backgroundImage: "url('/public/img/Slider3.png')" }}>
+                    style={{ backgroundImage: "url('/img/Slider3.png')" }}>
                     <div className="hidden md:block">
                         <h1 className="text-white transform -rotate-90 scale-x-[1] text-7xl font-bold font-robotoFlex opacity-70 w-[300px]">
                             EXPLORA
@@ -158,12 +158,12 @@ export const SliderHome = () => {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <img className="w-[250px]" src="/public/img/Deco pipas.png" alt="Pipas" />
+                        <img className="w-[250px]" src="/img/Deco pipas.png" alt="Pipas" />
                     </div>
                 </div>
                 <div
                     className={`slider4 pt-4 bg-no-repeat bg-cover flex items-center justify-between transition-all duration-500 h-[520px] ${activeSlider === 4 ? 'block' : 'hidden'}`}
-                    style={{ backgroundImage: "url('/public/img/Slider4.png')" }}>
+                    style={{ backgroundImage: "url('/img/Slider4.png')" }}>
                     <div className="hidden md:block">
                         <h1 className="text-white transform -rotate-90 scale-x-[1] text-7xl font-bold font-robotoFlex opacity-70 w-[300px]">
                             COMENTA
@@ -206,7 +206,7 @@ export const SliderHome = () => {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <img className="w-[250px]" src="/public/img/Deco pipas.png" alt="Pipas" />
+                        <img className="w-[250px]" src="/img/Deco pipas.png" alt="Pipas" />
                     </div>
                 </div>
             </div>

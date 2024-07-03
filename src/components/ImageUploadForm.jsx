@@ -107,7 +107,7 @@ const ImageUploadForm = ({ isEditing }) => {
 
     return (
         <div className="bg-no-repeat bg-cover"
-            style={{ backgroundImage: "url('/public/img/image.png')" }}>
+            style={{ backgroundImage: "url('/img/image.png')" }}>
 
             <div className="md:w-[500px] mx-auto pt-10">
                 <div className="p-4">

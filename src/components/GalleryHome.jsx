@@ -27,7 +27,7 @@ export const GalleryHome = () => {
 
     return (
         <div className="bg-no-repeat bg-cover p-4 flex flex-col items-center"
-            style={{ backgroundImage: "url('/public/img/FondoGaleria.png')" }}>
+            style={{ backgroundImage: "url('/img/FondoGaleria.png')" }}>
             <div className="p-2 flex justify-center">
                 <div className="absolute">
                     <h1 className="hidden text-5xl font-black font-robotoFlex italic opacity-40 md:block"

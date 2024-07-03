@@ -90,7 +90,7 @@ export const CarrouselMovil = () => {
 
     return (
         <div className="relative w-full overflow-hidden bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('/public/img/Fondo slider.png')" }}>
+        style={{ backgroundImage: "url('/img/Fondo slider.png')" }}>
             <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeSlider * 100}%)` }}>
                 {slides.map((slide, index) => (
                     <div key={index} className="min-w-full flex flex-col items-center justify-center h-[500px] p-2">

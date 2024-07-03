@@ -6,10 +6,10 @@ export const Header = () => {
 
     return (
         <div className="bg-no-repeat bg-cover bg-center md:pb-20 md:w-full md:pt-5"
-            style={{ backgroundImage: "url('/public/img/FondoHeader.png')" }}>
+            style={{ backgroundImage: "url('/img/FondoHeader.png')" }}>
             <div className="flex flex-col justify-center items-center pb-3">
                 <div className="md:pr-[500px] absolute z-10">
-                    <img className="hidden md:block w-[550px]" src="/public/img/Keko principal.png" alt="Imagen keko" />
+                    <img className="hidden md:block w-[550px]" src="/img/Keko principal.png" alt="Imagen keko" />
                 </div>
                 <div className="md:w-[800px]">
                     <div className="flex flex-col items-center font-robotoFlex font-black p-4 text-[#ffffff55] md:items-end">
@@ -34,7 +34,7 @@ export const Header = () => {
                     <h2 className=" text-gradient font-robotoFlex italic font-black text-2xl">
                         SCROLL
                     </h2>
-                    <img src="/public/img/Line 4.png" alt="Scroll" />
+                    <img src="/img/Line 4.png" alt="Scroll" />
                 </div>
             </div>
 

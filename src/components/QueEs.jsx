@@ -28,13 +28,13 @@ export const QueEs = () => {
                             ¿A qué esperas? <span className="text-[#F05858] font-semibold">Regístrate </span>ahora mismo para comenzar a compartir tu arte y permitir que el mundo conozca tu talento.
                         </p>
                         <div className="lg:absolute z-10 transform lg:translate-x-[430px]">
-                            <img className="w-[300px] md:w-[400px]" src="/public/img/casete.png" alt="cassete" />
+                            <img className="w-[300px] md:w-[400px]" src="/img/casete.png" alt="cassete" />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="flex justify-center">
-                <img className="absolute z-20 transform translate-y-[-69px]" src="/public/img/Detalle1.svg" alt="detalle down" />
+                <img className="absolute z-20 transform translate-y-[-69px]" src="/img/Detalle1.svg" alt="detalle down" />
                 <BannerVideo />
             </div>
         </div>

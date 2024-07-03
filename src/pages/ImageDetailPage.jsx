@@ -106,7 +106,7 @@ export const ImageDetailPage = () => {
             Swal.fire({
                 title: 'Advertencia',
                 text: "¡Ya le has dado like a este diseño!",
-                iconHtml: `<div class="custom-icon-container"><img src="/public/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
+                iconHtml: `<div class="custom-icon-container"><img src="/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
                 confirmButtonColor: '#000000',
                 confirmButtonText: 'Vale',
                 customClass: {
@@ -143,7 +143,7 @@ export const ImageDetailPage = () => {
                             </div>
                             <p className="text-white font-light font-robotoFlex pt-2">{image.description}</p>
                             <div className="pt-10 flex gap-2 items-center">
-                                <img className="w-[55px]" src="/public/img/Imagen usuario provi.svg" alt="Img user" />
+                                <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
                                 <p className="text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user ? image.user.username : 'Unknown User'}</span></p>
                             </div>
                             <div className="text-white bg-[#6868684e] mt-5 p-5 rounded-md border border-white border-opacity-10 shadow-md font-robotoFlex flex flex-col items-center">
@@ -207,7 +207,7 @@ export const ImageDetailPage = () => {
                             comments.map((comment) => (
                                 <div className="flex items-center justify-between p-2" key={comment.id}>
                                     <div className="flex gap-4 p-3 items-center">
-                                        <img className="w-[55px]" src="/public/img/Favicon.svg" alt="Img user" />
+                                        <img className="w-[55px]" src="/img/Favicon.svg" alt="Img user" />
                                         <div className="flex flex-col">
                                             <div className="flex items-center">
                                                 <Icon className="text-xl text-[#F05858]" icon="mdi:user"/>

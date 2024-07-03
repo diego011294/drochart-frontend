@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react/dist/iconify.js"
 export const Footer = () => {
     return (
         <>
-        <div style={{ backgroundImage: "url('/public/img/Prueba.png')" }} className="bg-cover bg-no-repeat max-w-full items-center bottom-0 left-0 pt-[20px] md:hidden">
+        <div style={{ backgroundImage: "url('/img/Prueba.png')" }} className="bg-cover bg-no-repeat max-w-full items-center bottom-0 left-0 pt-[20px] md:hidden">
             <div className="flex flex-col justify-center items-center text-white text-center p-2 gap-3">
                 <h2 className="text-xl font-semibold">DROCH.ART</h2>
                 <p className="text-sm font-light">
@@ -47,7 +47,7 @@ export const Footer = () => {
 
 
         <div className="hidden md:block bottom-0 left-0 w-full">
-            <div style={{ backgroundImage: "url('/public/img/Prueba.png')" }} className="bg-cover bg-no-repeat max-w-full h-[520px] items-center p-3">
+            <div style={{ backgroundImage: "url('/img/Prueba.png')" }} className="bg-cover bg-no-repeat max-w-full h-[520px] items-center p-3">
                 <div className="flex flex-row justify-center text-white pt-[80px]">
                     <div style={{ borderImage: 'linear-gradient(90deg, rgba(223,105,105,1) 50%, rgba(204,65,65,0) 100%)', borderImageSlice: '1' }} className="border-b-2 flex justify-between items-center w-[900px]">
                         <h2 className="text-xl font-semibold">DROCH.ART</h2>

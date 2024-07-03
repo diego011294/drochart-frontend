@@ -40,7 +40,7 @@ export const UserStats = () => {
                     <p>{error}</p>
                 ) : userWithMostPosts ? (
                     <div className='text-center p-4 flex flex-col items-center'>
-                        <img className='w-[90px]' src="/public/img/Imagen usuario provi.svg" alt="Imagen usuario" />
+                        <img className='w-[90px]' src="/img/Imagen usuario provi.svg" alt="Imagen usuario" />
                         <h1 className='text-white font-rockSalt text-4xl'>{userWithMostPosts.username}</h1>
                         <p className='pt-2 text-[#ffffff66] font-extralight'>{userWithMostPosts.email}</p>
                     </div>

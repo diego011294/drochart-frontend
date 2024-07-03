@@ -38,7 +38,7 @@ export const UserImagesPanel = () => {
             const result = await Swal.fire({
                 title: '¿Estás seguro?',
                 text: 'No podrás revertir esta acción.',
-                iconHtml: `<div class="custom-icon-container"><img src="/public/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
+                iconHtml: `<div class="custom-icon-container"><img src="/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
                 showCancelButton: true,
                 confirmButtonColor: '#000000',
                 cancelButtonColor: '#d33',
@@ -61,7 +61,7 @@ export const UserImagesPanel = () => {
                 Swal.fire({
                     title: 'Eliminado',
                     text: 'El diseño se ha eliminado correctamente',
-                    iconHtml: `<div class="custom-icon-container"><img src="/public/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
+                    iconHtml: `<div class="custom-icon-container"><img src="/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
                     confirmButtonColor: '#000000',
                     confirmButtonText: 'Vale',
                     customClass: {
@@ -95,7 +95,7 @@ export const UserImagesPanel = () => {
             const result = await Swal.fire({
                 title: '¿Estás seguro?',
                 text: 'No podrás revertir esta acción y se eliminarán todas tus imágenes.',
-                iconHtml: `<div class="custom-icon-container"><img src="/public/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
+                iconHtml: `<div class="custom-icon-container"><img src="/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
                 showCancelButton: true,
                 confirmButtonColor: '#000000',
                 cancelButtonColor: '#d33',
@@ -116,7 +116,7 @@ export const UserImagesPanel = () => {
                 Swal.fire({
                     title: 'Cuenta eliminada',
                     text: 'Tu cuenta ha sido eliminada correctamente.',
-                    iconHtml: `<div class="custom-icon-container"><img src="/public/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
+                    iconHtml: `<div class="custom-icon-container"><img src="/img/Imagen usuario provi.svg" alt="Img user" /></div>`,
                     confirmButtonColor: '#000000',
                     confirmButtonText: 'Vale',
                     customClass: {
@@ -146,7 +146,7 @@ export const UserImagesPanel = () => {
             <div className='flex flex-col gap-5 justify-center items-center p-10 lg:p-16'>
                 
                 <div className='flex flex-col items-center gap-3'>
-                    <img className='w-[100px]' src="/public/img/Imagen usuario provi.svg" alt="Usu provi" />
+                    <img className='w-[100px]' src="/img/Imagen usuario provi.svg" alt="Usu provi" />
                     <h1 className='text-white uppercase font-rockSalt text-2xl'>
                         {login.user?.username || 'Usuario no autenticado'}
                     </h1>
