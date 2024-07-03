@@ -14,12 +14,12 @@ export const BannerVideo = () => {
     return (
         <div className="relative flex justify-center items-center h-[300px] md:h-[500px] w-full">
             <video className="absolute top-0 left-0 w-full h-full object-cover opacity-50" autoPlay muted loop>
-                <source src="/public/img/5621712-hd_1920_1080_24fps.mp4" type="video/mp4" />
+                <source src="/img/5621712-hd_1920_1080_24fps.mp4" type="video/mp4" />
                 Tu navegador no soporta la etiqueta de video.
             </video>
             <div className="absolute flex flex-col justify-center items-center z-10">
                 <button onClick={handleOpenModal}>
-                    <img className="w-[10rem] transition-all duration-500 hover:w-[200px]" src="/public/img/PLay.svg" alt="Play-btn" />
+                    <img className="w-[10rem] transition-all duration-500 hover:w-[200px]" src="/img/PLay.svg" alt="Play-btn" />
                 </button>
                 <h1 className="text-center text-2xl font-rockSalt font-bold text-white md:text-3xl">
                     "El arte no tiene limites"
@@ -37,7 +37,7 @@ export const BannerVideo = () => {
                         </button>
                         <div className="aspect-w-16 aspect-h-9 relative">
                             <video className="w-full h-full" autoPlay controls>
-                                <source src="/public/img/EL ARTE EMPIEZA AQUI.mp4" type="video/mp4" />
+                                <source src="/img/EL ARTE EMPIEZA AQUI.mp4" type="video/mp4" />
                                 Tu navegador no soporta la etiqueta de video.
                             </video>
                         </div>
