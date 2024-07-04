@@ -199,7 +199,7 @@ export const GalleryPage = () => {
                         </div>
                         <div className="flex items-center justify-between position-">
                             <div className="pt-3 flex gap-2 items-center">
-                                <img className="w-[55px]" src="/public/img/Imagen usuario provi.svg" alt="Img user" />
+                                <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
                                 <p className="text-sm text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user.username}</span></p>
                             </div>
                             {!login.isAdmin || <>
