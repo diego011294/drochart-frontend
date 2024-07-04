@@ -14,16 +14,19 @@ export const GalleryPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
+    const [loadingGallery, setLoadingGallery] = useState(false);
 
     useEffect(() => {
         fetchImages();
     }, [currentPage, searchTerm]);
 
     const fetchImages = async () => {
+        setLoadingGallery(true);
         try {
             const token = sessionStorage.getItem('token');
             if (!token) {
                 setError('Token no encontrado, por favor inicie sesión.');
+                setLoadingGallery(false);
                 return;
             }
 
@@ -53,6 +56,8 @@ export const GalleryPage = () => {
             } else {
                 setError('Error al obtener las imágenes.');
             }
+        } finally {
+            setLoadingGallery(false);
         }
     };
 
@@ -96,7 +101,7 @@ export const GalleryPage = () => {
                 customClass: {
                     popup: 'custom-popup', 
                 },
-        });
+            });
         }
     };
 
@@ -177,44 +182,48 @@ export const GalleryPage = () => {
                 </button>
             </div>
             <div className="w-full bg-custom-gradient border-t-4 border-[#F05858] grid grid-cols-1 p-10 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {images.map(image => (
-                    <div key={image.id} className="border border-opacity-25 border-white p-2 bg-[#686868]">
-                        <div className="flex flex-col items-center">
-                            <div className="flex justify-end">
-                                <div className="w-full lg:h-[310px] lg:overflow-hidden">
-                                    <button><img src={image.url} alt={image.title} className="w-full h-full object-cover"
-                                    onClick={() => goToImageDetail(image.id)} /></button>
-                                </div>
-                                <div className="absolute flex items-center gap-2 bg-[#F05858] p-2 mt-2 rounded-s-3xl shadow-md">
-                                    <button onClick={() => likeImage(image.id)}>
-                                        <Icon className="text-[#ffffffa9] hover:text-[#FFFFFF] transition-all duration-500 text-xl" icon="bxs:like" />
-                                    </button>
-                                    <p className="text-white">{image.likes}</p>
+                {loadingGallery ? (
+                    <p className="text-white text-center p-4">Cargando Diseños...</p>
+                ) : (
+                    images.map(image => (
+                        <div key={image.id} className="border border-opacity-25 border-white p-2 bg-[#686868]">
+                            <div className="flex flex-col items-center">
+                                <div className="flex justify-end">
+                                    <div className="w-full lg:h-[310px] lg:overflow-hidden">
+                                        <button><img src={image.url} alt={image.title} className="w-full h-full object-cover"
+                                            onClick={() => goToImageDetail(image.id)} /></button>
+                                    </div>
+                                    <div className="absolute flex items-center gap-2 bg-[#F05858] p-2 mt-2 rounded-s-3xl shadow-md">
+                                        <button onClick={() => likeImage(image.id)}>
+                                            <Icon className="text-[#ffffffa9] hover:text-[#FFFFFF] transition-all duration-500 text-xl" icon="bxs:like" />
+                                        </button>
+                                        <p className="text-white">{image.likes}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="flex justify-between items-center pt-2">
-                            <h2 className="pl-2 pt-2 w-[200px] font-robotoFlex text-white truncate">{image.title}</h2>
-                            <p className="bg-black w-[40px] text-center p-1 rounded-full text-[10px] text-white">ILUS</p>
-                        </div>
-                        <div className="flex items-center justify-between position-">
-                            <div className="pt-3 flex gap-2 items-center">
-                                <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
-                                <p className="text-sm text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user.username}</span></p>
+                            <div className="flex justify-between items-center pt-2">
+                                <h2 className="pl-2 pt-2 w-[200px] font-robotoFlex text-white truncate">{image.title}</h2>
+                                <p className="bg-black w-[40px] text-center p-1 rounded-full text-[10px] text-white">ILUS</p>
                             </div>
-                            {!login.isAdmin || <>
-                                <div className="p-1 bg-[#ffffff48] rounded-2xl flex gap-1">
-                                    <button onClick={() => navigate(`/edit-image/${image.id}`)}>
-                                        <Icon className="text-[#e2e462] text-lg" icon="ph:pencil" />
-                                    </button>
-                                    <button onClick={() => deleteImage(image.id)}>
-                                        <Icon className="text-[#F05858] text-lg" icon="ph:trash" />
-                                    </button>
+                            <div className="flex items-center justify-between position-">
+                                <div className="pt-3 flex gap-2 items-center">
+                                    <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
+                                    <p className="text-sm text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user.username}</span></p>
                                 </div>
-                            </>}
+                                {!login.isAdmin || <>
+                                    <div className="p-1 bg-[#ffffff48] rounded-2xl flex gap-1">
+                                        <button onClick={() => navigate(`/edit-image/${image.id}`)}>
+                                            <Icon className="text-[#e2e462] text-lg" icon="ph:pencil" />
+                                        </button>
+                                        <button onClick={() => deleteImage(image.id)}>
+                                            <Icon className="text-[#F05858] text-lg" icon="ph:trash" />
+                                        </button>
+                                    </div>
+                                </>}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))
+                )}
             </div>
             <div className="flex justify-center gap-4 mt-6">
                 <button
