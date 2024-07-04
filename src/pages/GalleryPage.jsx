@@ -14,19 +14,16 @@ export const GalleryPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
-    const [loadingGallery, setLoadingGallery] = useState(false);
 
     useEffect(() => {
         fetchImages();
     }, [currentPage, searchTerm]);
 
     const fetchImages = async () => {
-        setLoadingGallery(true);
         try {
             const token = sessionStorage.getItem('token');
             if (!token) {
                 setError('Token no encontrado, por favor inicie sesión.');
-                setLoadingGallery(false);
                 return;
             }
 
@@ -180,10 +177,7 @@ export const GalleryPage = () => {
                 </button>
             </div>
             <div className="w-full bg-custom-gradient border-t-4 border-[#F05858] grid grid-cols-1 p-10 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {loadingGallery ? (
-                        <p className="text-white text-center p-4">Cargando Diseños...</p>
-                    ) : (
-                images.map(image => (
+            {images.map(image => (
                     <div key={image.id} className="border border-opacity-25 border-white p-2 bg-[#686868]">
                         <div className="flex flex-col items-center">
                             <div className="flex justify-end">
@@ -205,7 +199,7 @@ export const GalleryPage = () => {
                         </div>
                         <div className="flex items-center justify-between position-">
                             <div className="pt-3 flex gap-2 items-center">
-                                <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
+                                <img className="w-[55px]" src="/public/img/Imagen usuario provi.svg" alt="Img user" />
                                 <p className="text-sm text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user.username}</span></p>
                             </div>
                             {!login.isAdmin || <>
@@ -220,7 +214,6 @@ export const GalleryPage = () => {
                             </>}
                         </div>
                     </div>
-                )
                 ))}
             </div>
             <div className="flex justify-center gap-4 mt-6">
