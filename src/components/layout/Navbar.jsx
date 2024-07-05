@@ -96,9 +96,8 @@ export const Navbar = () => {
                                 {login.isAuth ? <LogoutBtn /> : <LoginNav />}
                             </div>
                             {login.isAuth && (
-                            <div className="bg-[#0000006a] hover:bg-black transition-all duration-500 rounded-full p-2 flex items-center">
-                                
-                                    <Link to="/show"><Icon className="text-white text-2xl" icon="ph:images-fill" /></Link>
+                            <div className="bg-[#0000006a] hover:bg-black transition-all duration-500 rounded-full p-2 flex items-center">                               
+                                    <Link to="/show"><Icon className="text-white text-2xl" onClick={handleLinkClick} icon="ph:images-fill" /></Link>
                             </div>
                             )}
                         </div>
