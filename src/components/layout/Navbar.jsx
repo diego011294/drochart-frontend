@@ -66,7 +66,7 @@ export const Navbar = () => {
                 </div>
                 <div className="flex items-center gap-10 justify-between max-w-full bg-gradient-to-r from-[#CC4141] to-[#DF6969] h-[90px] pr-5 pl-5 border-b border-[rgb(255,255,255,0.10)] shadow-md z-30">
                     <NavLink to={"/home"}>
-                        <img src="/public/img/Logo SVG.svg" alt="Logo DROCH.ART" />
+                        <img src="/img/Logo SVG.svg" alt="Logo DROCH.ART" />
                     </NavLink>
                     <div className="text-white hidden lg:flex font-robotoFlex">
                         <NavLink to="/home">
