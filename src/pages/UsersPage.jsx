@@ -23,7 +23,7 @@ export const UsersPage = () => {
     return (
         <div
         style={{ backgroundImage: "url('/img/Fondo2Stats.png')" }}
-        className="flex justify-center p-10 bg-no-repeat bg-cover">
+        className="flex justify-center p-10 bg-no-repeat bg-cover w-80 md:w-full lg:w-full">
 
             {!visibleForm ||
                 <UserModalForm />}
