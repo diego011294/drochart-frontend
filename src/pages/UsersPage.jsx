@@ -29,7 +29,7 @@ export const UsersPage = () => {
                 <UserModalForm />}
             <div 
                 style={{ backgroundImage: "url('/img/Fondo usuarios.png')" }}
-                className="bg-no-repeat bg-cover md:w-[780px] md:p-10">
+                className="bg-no-repeat bg-cover md:w-[780px] w-80 md:p-10">
                 <div className="p-2">
                         <div className="absolute">
                             <h1 className="hidden md:block text-5xl font-black font-robotoFlex italic opacity-40"
