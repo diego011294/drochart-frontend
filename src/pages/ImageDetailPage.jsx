@@ -133,10 +133,10 @@ export const ImageDetailPage = () => {
             {image && (
                 <div className="p-4 flex justify-center">
                     <div className="pb-5 bg-custom-gradient border-t-4 border-[#F05858] flex flex-col p-4 lg:flex-row gap-5">
-                        <div className="w-full md:h-[700px] lg:h-[700px] overflow-hidden bg-[#686868] p-2 border border-opacity-50 border-white lg:max-w-[650px]">
+                        <div className="w-80 md:w-full lg:w-full md:h-[700px] lg:h-[700px] overflow-hidden bg-[#686868] p-2 border border-opacity-50 border-white lg:max-w-[650px]">
                             <img className="h-full w-full object-cover" src={image.url} alt={image.title} />
                         </div>
-                        <div className="w-full md:w-[480px]">
+                        <div className="md:w-[480px]">
                             <div className="flex flex-col-reverse justify-between text-white md:flex-col-reverse items-start gap-3">
                                 <h2 className="text-2xl font-bold font-robotoFlex">{image.title}</h2>
                                 <p className="bg-black p-1 rounded-full text-xs w-[120px] text-center">Ilustración digital</p>
