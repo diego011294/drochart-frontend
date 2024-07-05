@@ -132,7 +132,7 @@ export const ImageDetailPage = () => {
         <div className="md:p-16">
             {image && (
                 <div className="p-4 flex justify-center">
-                    <div className="md:w-full lg:w-full pb-5 bg-custom-gradient border-t-4 border-[#F05858] flex flex-col p-4 lg:flex-row gap-5">
+                    <div className="w-80 md:w-full lg:w-full pb-5 bg-custom-gradient border-t-4 border-[#F05858] flex flex-col p-4 lg:flex-row gap-5">
                         <div className="md:h-[700px] lg:h-[700px] overflow-hidden bg-[#686868] p-2 border border-opacity-50 border-white lg:max-w-[650px]">
                             <img className="h-full w-full object-cover" src={image.url} alt={image.title} />
                         </div>
