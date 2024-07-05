@@ -132,8 +132,8 @@ export const ImageDetailPage = () => {
         <div className="md:p-16">
             {image && (
                 <div className="p-4 flex justify-center">
-                    <div className="pb-5 bg-custom-gradient border-t-4 border-[#F05858] flex flex-col p-4 lg:flex-row gap-5">
-                        <div className="w-80 md:w-full lg:w-full md:h-[700px] lg:h-[700px] overflow-hidden bg-[#686868] p-2 border border-opacity-50 border-white lg:max-w-[650px]">
+                    <div className="w-80 md:w-full lg:w-full pb-5 bg-custom-gradient border-t-4 border-[#F05858] flex flex-col p-4 lg:flex-row gap-5">
+                        <div className="md:h-[700px] lg:h-[700px] overflow-hidden bg-[#686868] p-2 border border-opacity-50 border-white lg:max-w-[650px]">
                             <img className="h-full w-full object-cover" src={image.url} alt={image.title} />
                         </div>
                         <div className="md:w-[480px]">
@@ -143,7 +143,7 @@ export const ImageDetailPage = () => {
                             </div>
                             <p className="text-white font-light font-robotoFlex pt-2">{image.description}</p>
                             <div className="pt-10 flex gap-2 items-center">
-                                <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
+                                <img className="w-[55px]" src="/public/img/Imagen usuario provi.svg" alt="Img user" />
                                 <p className="text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user ? image.user.username : 'Unknown User'}</span></p>
                             </div>
                             <div className="text-white bg-[#6868684e] mt-5 p-5 rounded-md border border-white border-opacity-10 shadow-md font-robotoFlex flex flex-col items-center">
@@ -207,7 +207,7 @@ export const ImageDetailPage = () => {
                             comments.map((comment) => (
                                 <div className="flex items-center justify-between p-2" key={comment.id}>
                                     <div className="flex gap-4 p-3 items-center">
-                                        <img className="w-[55px]" src="/img/Favicon.svg" alt="Img user" />
+                                        <img className="w-[55px]" src="/public/img/Favicon.svg" alt="Img user" />
                                         <div className="flex flex-col">
                                             <div className="flex items-center">
                                                 <Icon className="text-xl text-[#F05858]" icon="mdi:user"/>
