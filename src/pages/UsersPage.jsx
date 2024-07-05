@@ -29,7 +29,7 @@ export const UsersPage = () => {
                 <UserModalForm />}
             <div 
                 style={{ backgroundImage: "url('/img/Fondo usuarios.png')" }}
-                className="bg-no-repeat bg-cover md:w-[780px] w-80 md:p-10">
+                className="bg-no-repeat bg-cover md:w-[780px] md:p-10">
                 <div className="p-2">
                         <div className="absolute">
                             <h1 className="hidden md:block text-5xl font-black font-robotoFlex italic opacity-40"
@@ -47,7 +47,7 @@ export const UsersPage = () => {
                             </h3>
                         </div>
                     </div>
-                <div className="row rounded overflow-y-scroll h-[400px] w-70 barra p-2 md:w-full lg:w-full">
+                <div className="row rounded overflow-y-scroll h-[400px] barra p-2">
                     <div className="col">
                         {(visibleForm || !login.isAdmin) || <button
                             className="btn btn-dark my-2"
