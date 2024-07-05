@@ -146,8 +146,8 @@ export const ImageDetailPage = () => {
                                 <img className="w-[55px]" src="/img/Imagen usuario provi.svg" alt="Img user" />
                                 <p className="text-[#BDBCBC]">Autor: <br /> <span className="text-white">{image.user ? image.user.username : 'Unknown User'}</span></p>
                             </div>
-                            <div className="text-white bg-[#6868684e] mt-5 p-2 lg:p-5 rounded-md border border-white border-opacity-10 shadow-md font-robotoFlex flex flex-col items-center">
-                                <h2 className="text-center">Si estás interesado en esta obra puedes escribirle un correo al autor</h2>
+                            <div className="text-white bg-[#6868684e] mt-5 p-5 rounded-md border border-white border-opacity-10 shadow-md font-robotoFlex flex flex-col items-center">
+                                <h2 className="text-center text-xs md:text-sm lg:text-sm">Si estás interesado en esta obra puedes escribirle un correo al autor</h2>
                                 <div className="mt-3 text-center">
                                     <a href={`mailto:${image.user.email}`} className="text-l md:text-2xl font-rockSalt text-[#F05858] hover:underline">{image.user.email}</a>
                                 </div>
