@@ -47,7 +47,7 @@ export const UsersPage = () => {
                             </h3>
                         </div>
                     </div>
-                <div className="row rounded overflow-y-scroll h-[400px] barra p-2 w-70 md:w-full lg:w-full">
+                <div className="row rounded overflow-y-scroll h-[400px] barra p-2 w-64 md:w-full lg:w-full">
                     <div className="col">
                         {(visibleForm || !login.isAdmin) || <button
                             className="btn btn-dark my-2"
