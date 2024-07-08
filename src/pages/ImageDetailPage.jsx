@@ -129,7 +129,6 @@ export const ImageDetailPage = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center">
         <div className="md:p-16">
             {image && (
                 <div className="p-4 flex justify-center">
@@ -180,7 +179,6 @@ export const ImageDetailPage = () => {
                     </div>
                 </div>
             )}
-            </div>
             <div className="p-3">
                 <div className="pb-5 md:flex justify-center">
                     <div className="absolute">
