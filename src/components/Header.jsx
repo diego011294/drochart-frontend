@@ -31,7 +31,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <div className="hidden lg:flex items-center gap-4 absolute transform translate-x-[-600px] translate-y-[100px] -rotate-90 scale-x-[1]">
-                    <h2 className=" text-gradient font-robotoFlex italic font-white text-2xl">
+                    <h2 className=" text-gradient font-robotoFlex italic text-white font-black text-2xl opacity-30">
                         SCROLL
                     </h2>
                     <img src="/img/Line 4.png" alt="Scroll" />
